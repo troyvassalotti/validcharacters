@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
     "src/css": "assets/css"
   });
   eleventyConfig.addPassthroughCopy({
-    "src/scripts": "assets/js"
+    "src/scripts": "assets/scripts"
   });
   eleventyConfig.addPassthroughCopy({
     "src/audio": "assets/audio"

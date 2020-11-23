@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
 
+    {# I'm not very worried about speed on this simple site #}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&family=Red+Hat+Text:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://d33wubrfki0l68.cloudfront.net">
     <link rel="dns-prefetch" href="https://d33wubrfki0l68.cloudfront.net">
     <link rel="canonical" href="https://validcharacters.netlify.app/{{page.url}}">
@@ -16,7 +19,7 @@
     <meta name="og:type" content="website">
     <meta name="og:title" content="{{ title }}">
     <meta name="og:description" content="{{ description }}">
-    <meta name="og:site_name" content="https://validcharacters.netlify.app/">
+    <meta name="og:site_name" content="https://validcharacters.netlify.app/{{page.url}}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ title }}">
     <meta name="twitter:description" content="{{ description }}">
