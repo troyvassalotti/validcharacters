@@ -21,4 +21,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("logo", function () {
     return ``
   });
+
+  eleventyConfig.addShortcode("header", function () {
+    return ``
+  });
 };

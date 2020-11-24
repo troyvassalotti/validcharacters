@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +25,36 @@
     <meta name="twitter:title" content="{{ title }}">
     <meta name="twitter:description" content="{{ description }}">
   </head>
-  <body>
 
+  <body>
+    <header>
+      <a href="/">
+        <img src="/assets/img/logo.png" alt="troy.">
+      </a>
+      <nav>
+        <button id="toggle" aria-expanded="false">Menu</button>
+        <ul id="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/stream">Stream</a></li>
+          <li><a href="/demos">Demos</a></li>
+          <li><a href="/pages/privacy">Privacy</a></li>
+          <li><a href="/pages/terms">Terms</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    {{ content | safe }}
+
+    <footer class="footer">
+      <div class="wrapper" data-constrain="most">
+        <p><a href="/pages/privacy">Privacy Policy</a> | <a href="/pages/terms">Terms &amp; Conditions</a></p>
+      </div>
+    </footer>
+
+    <script src="/assets/scripts/main.js" async></script>
+    {% if plvylist %}
+    <script src="/assets/scripts/plvylist.js" async></script>
+    {% endif %}
   </body>
+
 </html>

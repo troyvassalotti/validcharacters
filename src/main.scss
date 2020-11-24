@@ -121,4 +121,68 @@ h6 {
   font-weight: 700;
 }
 
+// BEGIN ACTUAL PAGE CONTENT
+.header {
+  background: $dark;
+  padding: 1em;
+  color: $light;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  button {
+    position: absolute;
+    right: 1em;
+    top: 0.8em;
+    padding: 8px;
+    border: 2px solid $light;
+    border-radius: 5px;
+    font-size: 1em;
+    background: transparent;
+    color: $light;
+    display: none;
+
+    &:focus,
+    &:hover {
+      background: $light;
+      color: $black;
+    }
+  }
+
+  nav {
+    border-top: 1px solid transparentize(#fff, 0.4);
+    padding: 1em 1em 0;
+
+    li {
+      margin-bottom: 1em;
+    }
+
+    a {
+      display: block;
+    }
+  }
+}
+
+.js .header {
+  ul {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  button {
+    display: block;
+  }
+}
+
 @import "_media";
