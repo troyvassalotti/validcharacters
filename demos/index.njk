@@ -8,12 +8,10 @@ layout: main
   <section>
     <h2>alone in a crowded room</h2>
     {% for demo in demos.aloneDemos %}
-    <figure>
-      <video src="{{ demo.src }}" controls playsinline poster="{{ demo.poster }}">
-        <p>Sorry, your browser doesn't support videos!</p>
-      </video>
-      <figcaption>{{ demo.file }}</figcaption>
-    </figure>
+    <video src="{{ demo.src }}" controls playsinline>
+      <p>Sorry, your browser doesn't support videos!</p>
+    </video>
+    <p>{{ demo.file }}</p>
     {% endfor %}
   </section>
   <section>

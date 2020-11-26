@@ -226,87 +226,88 @@ plvyTracklistDiv.insertAdjacentElement("afterbegin", songs);
 // Define all the tracks, settings, and such
 const artworkForTracks = "/assets/img/aiacr.jpg",
   albumForTracks = "Alone In A Crowded Room",
-  artistForTracks = "troy.";
+  artistForTracks = "troy.",
+  filePrefix = "/assets/audio/";
 var allTracks = [],
   tracks = [{
-      file: "/assets/audio/01_I_Know_I'm_Not.mp3",
+      file: filePrefix + "01_I_Know_I'm_Not.mp3",
       title: "I Know I'm Not",
       artist: artistForTracks,
       album: albumForTracks,
       artwork: artworkForTracks
     },
     {
-      file: "/assets/audio/02_Baby_Blue.mp3",
+      file: filePrefix + "02_Baby_Blue.mp3",
       title: "Baby Blue",
       artist: artistForTracks,
       album: albumForTracks,
       artwork: artworkForTracks
     },
     {
-      file: "/assets/audio/03_Insincerity.mp3",
+      file: filePrefix + "03_Insincerity.mp3",
       title: "Insincerity",
       artist: artistForTracks,
       album: albumForTracks,
       artwork: artworkForTracks
     },
     {
-      file: "/assets/audio/04_Like_Sinking.mp3",
+      file: filePrefix + "04_Like_Sinking.mp3",
       title: "Like Sinking",
       artist: artistForTracks,
       album: albumForTracks,
       artwork: artworkForTracks
     },
     {
-      file: "/assets/audio/05_Do_Better.mp3",
+      file: filePrefix + "05_Do_Better.mp3",
       title: "Do Better",
       artist: artistForTracks,
       album: albumForTracks,
       artwork: artworkForTracks
     },
     {
-      file: "/assets/audio/06_Market_Street.mp3",
+      file: filePrefix + "06_Market_Street.mp3",
       title: "Market Street",
       artist: artistForTracks,
       album: albumForTracks,
       artwork: artworkForTracks
     },
     {
-      file: "/assets/audio/07_Alone_In_a_Crowded_Room.mp3",
+      file: filePrefix + "07_Alone_In_a_Crowded_Room.mp3",
       title: "Alone In A Crowded Room",
       artist: artistForTracks,
       album: albumForTracks,
       artwork: artworkForTracks
     },
     {
-      file: "/assets/audio/08_Long_Time_Caller_First Time List.mp3",
+      file: filePrefix + "08_Long_Time_Caller_First Time List.mp3",
       title: "Long Time Caller, First Time Listener",
       artist: artistForTracks,
       album: albumForTracks,
       artwork: artworkForTracks
     },
     {
-      file: "/assets/audio/09_Detroit.mp3",
+      file: filePrefix + "09_Detroit.mp3",
       title: "Detroit",
       artist: artistForTracks,
       album: albumForTracks,
       artwork: artworkForTracks
     },
     {
-      file: "/assets/audio/10_We_Can't_Rush_These_Things.mp3",
+      file: filePrefix + "10_We_Can't_Rush_These_Things.mp3",
       title: "We Can't Rush These Things",
       artist: artistForTracks,
       album: albumForTracks,
       artwork: artworkForTracks
     },
     {
-      file: "/assets/audio/11_Closure.mp3",
+      file: filePrefix + "11_Closure.mp3",
       title: "Closure",
       artist: artistForTracks,
       album: albumForTracks,
       artwork: artworkForTracks
     },
     {
-      file: "/assets/audio/12_Like_Drowning_(Bonus_Track).mp3",
+      file: filePrefix + "12_Like_Drowning_(Bonus_Track).mp3",
       title: "Like Drowning (Bonus Track)",
       artist: artistForTracks,
       album: albumForTracks,
@@ -482,8 +483,10 @@ function shuffleTracks() {
 
 // on loadstart of the audio resource, change the active song class
 audio.addEventListener("loadstart", () => {
+  let getter = settings.currentTrack;
   document
-    .querySelector(`[data-file="${audio.src}"]`)
+    // .querySelector(`[data-file="${audio.src}"]`)
+    .querySelector(`[data-file="${tracks[getter].file}"]`)
     .classList.add("plvy--song__active");
 });
 

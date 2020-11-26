@@ -20,12 +20,14 @@ layout: main
   <section>
     <h2>unreleased footage alert!</h2>
     <p>Find demos and more behind the scenes footage in the demos vault.</p>
-    <img src="https://via.placeholder.com/275x175" alt="">
-    <p><a href="#">&gt;&gt; video_title.MOV</a></p>
-    <p><a href="#">&gt;&gt; video_title.MOV</a></p>
-    <img src="https://via.placeholder.com/275x175" alt="">
+    {% for demo in demos.aloneDemos.slice(0, 2) %}
+    <video src="{{ demo.src }}" controls playsinline>
+      <p>Sorry, your browser doesn't support videos!</p>
+    </video>
+    <p>{{ demo.file }}</p>
+    {% endfor %}
     <div>
-      <a href="#" target="_blank" rel="noopener">Demo Vault</a>
+      <a href="/demos">Demo Vault</a>
     </div>
   </section>
 </main>

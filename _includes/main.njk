@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://d33wubrfki0l68.cloudfront.net">
     <link rel="dns-prefetch" href="https://d33wubrfki0l68.cloudfront.net">
     <link rel="canonical" href="https://validcharacters.netlify.app/{{page.url}}">
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/main.css">
 
     <title>{{ title }}</title>
@@ -27,17 +28,14 @@
   </head>
 
   <body>
-    <header>
-      <a href="/">
-        <img src="/assets/img/logo.png" alt="troy.">
-      </a>
+    <header class="header">
+      <img src="/assets/img/logo.png" alt="troy.">
       <nav>
         <button id="toggle" aria-expanded="false">Menu</button>
         <ul id="menu">
           <li><a href="/">Home</a></li>
           <li><a href="/pages/stream">Stream</a></li>
           <li><a href="/demos">Demos</a></li>
-          <li><a href="/pages/privacy">Privacy</a></li>
           <li><a href="/pages/terms">Terms</a></li>
         </ul>
       </nav>
@@ -47,7 +45,7 @@
 
     <footer class="footer">
       <div class="wrapper" data-constrain="most">
-        <p><a href="www.troyv.dev">My Other Work</a> | <a href="/pages/terms">Terms &amp; Conditions</a></p>
+        <p><a href="www.troyv.dev" target="_blank" rel="noopener">My Other Work</a> | <a href="/pages/terms">Terms &amp; Conditions</a></p>
       </div>
     </footer>
 
