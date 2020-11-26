@@ -12,6 +12,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "src/audio": "assets/audio"
   });
+  eleventyConfig.addPassthroughCopy({
+    "src/video": "assets/video"
+  });
 
   // Shortcodes
   eleventyConfig.addShortcode("footer", function () {
