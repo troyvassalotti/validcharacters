@@ -10,7 +10,7 @@ plvyMetaDiv.classList.add("plvy--meta");
 // The artwork element
 const artwork = document.createElement("img");
 const artworkAttributes = {
-  src: "https://assets.codepen.io/3943058/missingart.png",
+  src: "/assets/img/missingart.png",
   width: "300",
   height: "300",
   alt: "album artwork",
@@ -224,34 +224,93 @@ plvyControlsDiv.insertAdjacentElement("afterend", plvyTracklistDiv);
 plvyTracklistDiv.insertAdjacentElement("afterbegin", songs);
 
 // Define all the tracks, settings, and such
+const artworkForTracks = "/assets/img/aiacr.jpg",
+  albumForTracks = "Alone In A Crowded Room",
+  artistForTracks = "troy.";
 var allTracks = [],
   tracks = [{
-      file: "https://assets.codepen.io/3943058/06+Market+Street.mp3",
-      title: "Market Street",
-      artist: "troy.",
-      album: "Alone In A Crowded Room",
-      artwork: "https://assets.codepen.io/3943058/heartcar.jpg"
+      file: "/assets/audio/01_I_Know_I'm_Not.mp3",
+      title: "I Know I'm Not",
+      artist: artistForTracks,
+      album: albumForTracks,
+      artwork: artworkForTracks
     },
     {
-      file: "https://assets.codepen.io/3943058/04+Like+Sinking.mp3",
-      title: "Like Sinking",
-      artist: "Action Hamilton",
-      album: "Alone In A Crowded Room",
-      artwork: "https://placekitten.com/300/300"
+      file: "/assets/audio/02_Baby_Blue.mp3",
+      title: "Baby Blue",
+      artist: artistForTracks,
+      album: albumForTracks,
+      artwork: artworkForTracks
     },
     {
-      file: "https://assets.codepen.io/3943058/03+Insincerity.mp3",
+      file: "/assets/audio/03_Insincerity.mp3",
       title: "Insincerity",
-      artist: "Action Hamilton",
-      album: "Alone In A Crowded Room",
-      artwork: "https://via.placeholder.com/300/300"
+      artist: artistForTracks,
+      album: albumForTracks,
+      artwork: artworkForTracks
     },
     {
-      file: "https://assets.codepen.io/3943058/10+We+Can%27t+Rush+These+Things.mp3",
+      file: "/assets/audio/04_Like_Sinking.mp3",
+      title: "Like Sinking",
+      artist: artistForTracks,
+      album: albumForTracks,
+      artwork: artworkForTracks
+    },
+    {
+      file: "/assets/audio/05_Do_Better.mp3",
+      title: "Do Better",
+      artist: artistForTracks,
+      album: albumForTracks,
+      artwork: artworkForTracks
+    },
+    {
+      file: "/assets/audio/06_Market_Street.mp3",
+      title: "Market Street",
+      artist: artistForTracks,
+      album: albumForTracks,
+      artwork: artworkForTracks
+    },
+    {
+      file: "/assets/audio/07_Alone_In_a_Crowded_Room.mp3",
+      title: "Alone In A Crowded Room",
+      artist: artistForTracks,
+      album: albumForTracks,
+      artwork: artworkForTracks
+    },
+    {
+      file: "/assets/audio/08_Long_Time_Caller_First Time List.mp3",
+      title: "Long Time Caller, First Time Listener",
+      artist: artistForTracks,
+      album: albumForTracks,
+      artwork: artworkForTracks
+    },
+    {
+      file: "/assets/audio/09_Detroit.mp3",
+      title: "Detroit",
+      artist: artistForTracks,
+      album: albumForTracks,
+      artwork: artworkForTracks
+    },
+    {
+      file: "/assets/audio/10_We_Can't_Rush_These_Things.mp3",
       title: "We Can't Rush These Things",
-      artist: "Not Action Hamilton",
-      album: "Alone In A Crowded Room",
-      artwork: "https://placekitten.com/300/300"
+      artist: artistForTracks,
+      album: albumForTracks,
+      artwork: artworkForTracks
+    },
+    {
+      file: "/assets/audio/11_Closure.mp3",
+      title: "Closure",
+      artist: artistForTracks,
+      album: albumForTracks,
+      artwork: artworkForTracks
+    },
+    {
+      file: "/assets/audio/12_Like_Drowning_(Bonus_Track).mp3",
+      title: "Like Drowning (Bonus Track)",
+      artist: artistForTracks,
+      album: albumForTracks,
+      artwork: artworkForTracks
     }
   ],
   trackCount = tracks.length,

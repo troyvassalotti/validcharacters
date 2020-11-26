@@ -7,24 +7,16 @@ layout: main
   <h1>demo vault</h1>
   <section>
     <h2>alone in a crowded room</h2>
-    <img src="https://via.placeholder.com/275x175" alt="">
-    <p><a href="#">&gt;&gt; video_title.MOV</a></p>
-    <img src="https://via.placeholder.com/275x175" alt="">
-    <p><a href="#">&gt;&gt; video_title.MOV</a></p>
-    <img src="https://via.placeholder.com/275x175" alt="">
-    <p><a href="#">&gt;&gt; video_title.MOV</a></p>
-    <img src="https://via.placeholder.com/275x175" alt="">
-    <p><a href="#">&gt;&gt; video_title.MOV</a></p>
+    {% for demo in demos.aloneDemos %}
+    <figure>
+      <video src="{{ demo.src }}" controls playsinline poster="{{ demo.poster }}">
+        <p>Sorry, your browser doesn't support videos!</p>
+      </video>
+      <figcaption>{{ demo.file }}</figcaption>
+    </figure>
+    {% endfor %}
   </section>
   <section>
     <h2>redux (coming eventually)</h2>
-    <img src="https://via.placeholder.com/275x175" alt="">
-    <p><a href="#">&gt;&gt; video_title.MOV</a></p>
-    <img src="https://via.placeholder.com/275x175" alt="">
-    <p><a href="#">&gt;&gt; video_title.MOV</a></p>
-    <img src="https://via.placeholder.com/275x175" alt="">
-    <p><a href="#">&gt;&gt; video_title.MOV</a></p>
-    <img src="https://via.placeholder.com/275x175" alt="">
-    <p><a href="#">&gt;&gt; video_title.MOV</a></p>
   </section>
 </main>
