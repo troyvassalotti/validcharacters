@@ -23,7 +23,6 @@ layout: main
     {% for demo in demos.aloneDemos.slice(0, 2) %}
     <video controls playsinline>
       <source src="{{ demo.srcH264 }}" type="video/mp4">
-      <source src="{{ demo.srcH265 }}" type="video/mp4">
       Sorry, your browser doesn't support these videos!
     </video>
     <p>{{ demo.file }}</p>
