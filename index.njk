@@ -21,8 +21,10 @@ layout: main
     <h2>unreleased footage alert!</h2>
     <p>Find demos and more behind the scenes footage in the demos vault.</p>
     {% for demo in demos.aloneDemos.slice(0, 2) %}
-    <video src="{{ demo.src }}" controls playsinline>
-      <p>Sorry, your browser doesn't support videos!</p>
+    <video controls playsinline>
+      <source src="{{ demo.srcH264 }}" type="video/mp4">
+      <source src="{{ demo.srcH265 }}" type="video/mp4">
+      Sorry, your browser doesn't support these videos!
     </video>
     <p>{{ demo.file }}</p>
     {% endfor %}
