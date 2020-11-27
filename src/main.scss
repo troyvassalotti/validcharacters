@@ -23,7 +23,11 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  font-family: $bodyFont;
+  font: {
+    family: $bodyFont;
+    size: var(--step-0);
+  }
+  color: $black;
 }
 
 img {
@@ -45,8 +49,16 @@ h4,
 h5,
 h6 {
   font-family: $headerFont;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0;
+}
+
+h1 {
+  font-size: var(--step-4);
+}
+
+h2 {
+  font-size: var(--step-3);
 }
 /* Use this class instead to put margins on my headings */
 .headline {
@@ -142,7 +154,7 @@ h6 {
   button {
     position: absolute;
     right: 1em;
-    top: 0.8em;
+    top: 1em;
     padding: 8px;
     border: 2px solid $light;
     border-radius: 5px;
@@ -170,11 +182,17 @@ h6 {
     //   display: block;
     // }
   }
+
+  img {
+    margin: 0;
+    width: 120px;
+  }
 }
 
 .js .header {
   ul {
     display: none;
+    margin-bottom: 0;
 
     &.is-active {
       display: block;
@@ -184,6 +202,26 @@ h6 {
   button {
     display: block;
   }
+}
+
+#about {
+  img {
+    width: 50%;
+  }
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid $black;
+  background: transparent;
+  color: $black;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+}
+
+video {
+  display: block;
+  max-width: 100%;
 }
 
 @import "_media";
