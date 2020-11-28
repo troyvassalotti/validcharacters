@@ -144,6 +144,13 @@ h2 {
 }
 
 // BEGIN ACTUAL PAGE CONTENT
+video {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+
 .header {
   background: $dark;
   padding: 1em;
@@ -187,9 +194,11 @@ h2 {
       margin-bottom: 1em;
     }
 
-    // a {
-    //   display: block;
-    // }
+    a {
+      &:visited {
+        color: $light;
+      }
+    }
   }
 
   img {
@@ -213,11 +222,43 @@ h2 {
   }
 }
 
+a:not([data-btn]) {
+  color: $blue;
+  position: relative;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.06em; // roughly the current letter thickness
+    width: 100%;
+    background-color: currentColor;
+    transition: transform 400ms ease-out;
+  }
+
+  &:hover::before {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  &::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  &:visited {
+    color: $red;
+  }
+}
+
 #about {
   background-color: $light;
 
   img {
     width: 65%;
+    max-width: 550px;
     margin: 0;
   }
 }
@@ -252,14 +293,56 @@ h2 {
 }
 
 #demos {
+  background-color: $light;
+
   .heading {
     background-color: #0a7ac9aa;
   }
+
+  .demo {
+    text-align: center;
+  }
+
+  .btn {
+    text-align: center;
+  }
 }
 
-video {
-  display: block;
-  max-width: 100%;
+.footer {
+  background: $dark;
+  padding: 1em;
+  color: $light;
+  margin-top: auto;
+
+  p {
+    font-size: var(--step--1);
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:visited {
+      color: $light;
+    }
+  }
+}
+
+.vault {
+  #alone {
+    .heading {
+      background-color: #e53d00aa;
+      margin-bottom: 1em;
+    }
+  }
+
+  #redux {
+    .heading {
+      background-color: #d0a5c0aa;
+      margin-bottom: 1em;
+    }
+  }
 }
 
 @import "_media";

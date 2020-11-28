@@ -1,17 +1,17 @@
 {
   "aloneDemos": [{
       "srcH264": "/assets/video/Long_Time_Caller.mp4",
-      "file": "Long_Time_Caller.mp4",
+      "file": ">> long_time_caller.mp4",
       "poster": ""
     },
     {
       "srcH264": "/assets/video/Baby_Blue.mp4",
-      "file": "Baby_Blue.mp4",
+      "file": ">> baby_blue.mp4",
       "poster": ""
     },
     {
       "srcH264": "/assets/video/Alone_in_a_Crowded_Room_Uncut.mp4",
-      "file": "Alone_in_a_Crowded_Room_Uncut.mp4",
+      "file": ">> alone_in_a_crowded_room.mp4",
       "poster": ""
     }
   ]

@@ -6,14 +6,14 @@ layout: main
 ---
 <main>
   <section id="about">
-    <div class="wrapper">
+    <div class="wrapper" data-constrain="more">
       <h1>this is a band.</h1>
       <div class="flex flex-middle space-out center">
         <img src="/assets/img/aiacr.jpg" alt="Album art for Alone in a Crowded Room">
         <p><i>(This is an album)</i></p>
       </div>
       <div class="btn">
-        <a href="https://distrokid.com/hyperfollow/actionhamilton/bFzI" target="_blank" rel="noopener">Listen/Stream</a>
+        <a href="https://distrokid.com/hyperfollow/actionhamilton/bFzI" target="_blank" rel="noopener" data-btn>Listen/Stream</a>
       </div>
     </div>
   </section>
@@ -31,19 +31,21 @@ layout: main
         <h2>unreleased footage alert!</h2>
       </div>
     </div>
-    <div class="wrapper">
+    <div class="wrapper" data-constrain="more">
       <p>Find demos and more behind the scenes footage in the demos vault.</p>
-      {% for demo in demos.aloneDemos.slice(0, 2) %}
-      <div class="grid two-col">
-        <video controls playsinline>
-          <source src="{{ demo.srcH264 }}" type="video/mp4">
-          Sorry, your browser doesn't support these videos!
-        </video>
-        <p>{{ demo.file }}</p>
+      <div class="container">
+        {% for demo in demos.aloneDemos.slice(0, 2) %}
+        <div class="demo">
+          <video controls playsinline>
+            <source src="{{ demo.srcH264 }}" type="video/mp4">
+            Sorry, your browser doesn't support these videos!
+          </video>
+          <p><a href="{{ demo.srcH264 }}">{{ demo.file }}</a></p>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-      <div>
-        <a href="/demos">Demo Vault</a>
+      <div class="btn">
+        <a href="/demos" data-btn>Demo Vault</a>
       </div>
     </div>
   </section>

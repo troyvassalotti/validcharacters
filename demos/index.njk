@@ -3,19 +3,35 @@ title: troy's demo vault
 description: Sometimes, a lot of work went into making my music. You can see that work here, in other audio and visual forms.
 layout: main
 ---
-<main>
-  <h1>demo vault</h1>
-  <section>
-    <h2>alone in a crowded room</h2>
-    {% for demo in demos.aloneDemos %}
-    <video controls playsinline>
-      <source src="{{ demo.srcH264 }}" type="video/mp4">
-      Sorry, your browser doesn't support these videos!
-    </video>
-    <p>{{ demo.file }}</p>
-    {% endfor %}
+<main class="vault">
+  <div class="wrapper">
+    <h1>demo vault</h1>
+  </div>
+  <section id="alone">
+    <div class="heading">
+      <div class="wrapper">
+        <h2>alone in a crowded room</h2>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container">
+        {% for demo in demos.aloneDemos %}
+        <div class="demo">
+          <video controls playsinline>
+            <source src="{{ demo.srcH264 }}" type="video/mp4">
+            Sorry, your browser doesn't support these videos!
+          </video>
+          <p><a href="{{ demo.srcH264 }}">{{ demo.file }}</a></p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </section>
-  <section>
-    <h2>redux (coming eventually)</h2>
+  <section id="redux">
+    <div class="heading">
+      <div class="wrapper">
+        <h2>redux (coming eventually)</h2>
+      </div>
+    </div>
   </section>
 </main>
