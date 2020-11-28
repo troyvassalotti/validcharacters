@@ -9,13 +9,14 @@
   --step-2: clamp(1.89rem, 1.7129rem + 0.8854vw, 2.3438rem);
   --step-3: clamp(2.2681rem, 2.0098rem + 1.2915vw, 2.93rem);
   --step-4: clamp(2.7219rem, 2.355rem + 1.8341vw, 3.6619rem);
-  --step-5: clamp(3.2656rem, 2.7537rem + 2.5598vw, 4.5775rem);
+  --step-5: clamp(4.2656rem, 3.7537rem + 3.5598vw, 5.5775rem);
   --gap: 1em;
 }
 
 html {
   min-height: 100vh;
   cursor: initial;
+  background-color: $white;
 }
 
 body {
@@ -54,11 +55,11 @@ h6 {
 }
 
 h1 {
-  font-size: var(--step-4);
+  font-size: var(--step-5);
 }
 
 h2 {
-  font-size: var(--step-3);
+  font-size: var(--step-4);
 }
 /* Use this class instead to put margins on my headings */
 .headline {
@@ -85,6 +86,14 @@ h2 {
 
 .col {
   flex-direction: column;
+}
+
+.flex-middle {
+  align-items: center;
+}
+
+.space-out {
+  justify-content: space-between;
 }
 /* I hear you asking "but what if something needs to be row-reverse?" and well, I haven't had that happen yet so we'll cross that bridge when we get there */
 *[data-state="reversed"] {
@@ -205,18 +214,47 @@ h2 {
 }
 
 #about {
+  background-color: $light;
+
   img {
-    width: 50%;
+    width: 65%;
+    margin: 0;
   }
 }
 
 .btn {
-  display: inline-block;
-  border: 1px solid $black;
-  background: transparent;
-  color: $black;
-  border-radius: 5px;
-  padding: 0.5em 1em;
+  padding: {
+    top: 1em;
+    bottom: 1em;
+  }
+
+  a {
+    display: inline-block;
+    border: 1px solid $black;
+    background: transparent;
+    color: $black;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    transition: color 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      color: $white;
+      background: $black;
+    }
+  }
+}
+
+#stream {
+  .heading {
+    background-color: #d0a5c0aa;
+    text-align: right;
+  }
+}
+
+#demos {
+  .heading {
+    background-color: #0a7ac9aa;
+  }
 }
 
 video {
