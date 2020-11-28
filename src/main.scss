@@ -151,6 +151,37 @@ video {
   margin: auto;
 }
 
+a:not([data-btn]) {
+  color: $blue;
+  position: relative;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.06em; // roughly the current letter thickness
+    width: 100%;
+    background-color: currentColor;
+    transition: transform 400ms ease-out;
+  }
+
+  &:hover::before {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  &::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  &:visited {
+    color: $red;
+  }
+}
+
 .header {
   background: $dark;
   padding: 1em;
@@ -219,37 +250,6 @@ video {
 
   button {
     display: block;
-  }
-}
-
-a:not([data-btn]) {
-  color: $blue;
-  position: relative;
-  text-decoration: none;
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 0.06em; // roughly the current letter thickness
-    width: 100%;
-    background-color: currentColor;
-    transition: transform 400ms ease-out;
-  }
-
-  &:hover::before {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-
-  &::before {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-
-  &:visited {
-    color: $red;
   }
 }
 
