@@ -15,17 +15,4 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "src/video": "assets/video"
   });
-
-  // Shortcodes
-  eleventyConfig.addShortcode("footer", function () {
-    return ``
-  });
-
-  eleventyConfig.addShortcode("logo", function () {
-    return ``
-  });
-
-  eleventyConfig.addShortcode("header", function () {
-    return ``
-  });
 };
