@@ -4,33 +4,32 @@ description: I make music under the name troy. See, it's easy to remember becaus
 plvylist: true
 layout: main
 ---
-block content
-    main
-        section#about
-            div.wrapper(data-constrain="more")
-                h1 this is a band.
-                div.flex.flex-middle.space-out.center
-                    img(src="/assets/img/aiacr.jpg" alt="Album art for Alone in a Crowded Room")
-                    p: i (This is an album)
-                div.btn
-                    a(href="https://distrokid.com/hyperfollow/actionhamilton/bFzI" target="_blank" rel="noopener" data-btn) Listen/Stream
-        section#stream
-            div.heading
-                div.wrapper
-                    h2 you can also stream here
-            div.plvylist
-        section#demos
-            div.heading
-                div.wrapper
-                    h2 unreleased footage alert!
-            div.wrapper(data-constrain="more")
-                p Find demos and more behind the scenes footage in the demos vault.
-                div.container
-                    each demo in demos.aloneDemos.slice(0, 2)
-                        div.demo
-                            video(controls playsinline)
-                                source(src=`${demo.srcH264}` type="video/mp4")
-                                | Sorry, your browser doesn't support these videos!
-                            p: a(href=`${demo.srcH264}`)=demo.file
-                div.btn
-                    a(href="/pages/demos" data-btn) Demo Vault
+main
+    section#about
+        div.wrapper(data-constrain="more")
+            h1 this is a band.
+            div.flex.flex-middle.space-out.center
+                img(src="/assets/img/aiacr.jpg" alt="Album art for Alone in a Crowded Room")
+                p: i (This is an album)
+            div.btn
+                a(href="https://distrokid.com/hyperfollow/actionhamilton/bFzI" target="_blank" rel="noopener" data-btn) Listen/Stream
+    section#stream
+        div.heading
+            div.wrapper
+                h2 you can also stream here
+        div.plvylist
+    section#demos
+        div.heading
+            div.wrapper
+                h2 unreleased footage alert!
+        div.wrapper(data-constrain="more")
+            p Find demos and more behind the scenes footage in the demos vault.
+            div.container
+                each demo in demos.aloneDemos.slice(0, 2)
+                    div.demo
+                        video(controls playsinline)
+                            source(src=`${demo.srcH264}` type="video/mp4")
+                            | Sorry, your browser doesn't support these videos!
+                        p: a(href=`${demo.srcH264}`)=demo.file
+            div.btn
+                a(href="/pages/demos" data-btn) Demo Vault
