@@ -1,0 +1,24 @@
+---
+title: troy's demo vault
+description: Sometimes, a lot of work went into making my music. You can see that work here, in other audio and visual forms.
+layout: main
+---
+main.vault
+    div.wrapper
+        h1 demo vault
+    section#alone
+        div.heading
+            div.wrapper
+                h2 alone in a crowded room
+        div.wrapper
+            div.container
+                each demo in demos.aloneDemos
+                    div.demo
+                        video(controls playsinline)
+                            source(src=`${demo.srcH264}` type="video/mp4")
+                            | Sorry, your browser doesn't support these videos!
+                        p: a(href=`${demo.srcH264}`)=demo.file
+    section#redux
+        div.heading
+            div.wrapper
+                h2 redux (coming eventually)

@@ -1,0 +1,58 @@
+doctype html
+html(lang="en" dir="ltr")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        if noindex
+            meta(name="robots" content="noindex nofollow")
+        link(rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>")
+
+        // Google Fonts Loading Strategy
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&family=Red+Hat+Text:wght@400;700&display=swap")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&family=Red+Hat+Text:wght@400;700&display=swap" media="print" onload="this.media='all'")
+        noscript
+            link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&family=Red+Hat+Text:wght@400;700&display=swap")
+
+        link(rel="preconnect" href="https://d33wubrfki0l68.cloudfront.net")
+        link(rel="dns-prefetch" href="https://d33wubrfki0l68.cloudfront.net")
+        link(rel="canonical" href=`https://thisisa.band{page.url}`)
+        link(href="https://unpkg.com/sanitize.css" rel="stylesheet")
+        link(rel="stylesheet" href="/assets/css/main.css")
+
+        if plvylist
+            link(rel="stylesheet" href="/assets/css/plvylist.css")
+
+        title=title
+        meta(name="description" content=description)
+        meta(name="og:locale" content="en_US")
+        meta(name="og:type" content="website")
+        meta(name="og:title" content=title)
+        meta(name="og:description" content=description)
+        meta(name="og:site_name" content=`https://thisisa.band{page.url}`)
+        meta(name="twitter:card" content="summary")
+        meta(name="twitter:title" content=title)
+        meta(name="twitter:description" content=description)
+
+    body
+        header.header
+            img(src="/assets/img/logo.png" alt="troy.")
+            nav
+                button#toggle(aria-expanded="false") Menu
+                ul#menu
+                    li: a(href="/") Home
+                    li: a(href="/pages/stream") Stream
+                    li: a(href="/pages/demos") Demos
+
+        block content
+
+        footer.footer
+            div.wrapper(data-constrain="most")
+                p
+                    a(href="https://www.troyv.dev" target="_blank" rel="noopener") My Other Work
+                    | |
+                    a(href="/pages/terms") Terms & Conditions
+
+        script(src="/assets/scripts/main.js" async)
+        if plvylist
+            script(src="/assets/scripts/plvylist.js" async)
